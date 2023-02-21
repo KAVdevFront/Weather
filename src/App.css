@@ -1,0 +1,485 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body {
+    background: black;
+    margin: 0 0 10px 0;
+}
+
+.app {
+
+
+}
+
+.container {
+    width: 1220px;
+    padding: 20px 10px 0px;
+    max-width: 100%;
+    font-family: 'Montserrat';
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+
+}
+
+.header__block {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__city {
+    display: flex;
+    align-items: center;
+}
+
+.header__icon {
+    width: 65px;
+    height: 65px;
+}
+
+.header__title {
+    margin-left: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    color: #4793FF;
+
+}
+
+.header__input {
+    background: #4F4F4F;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+    padding: 10px;
+}
+
+.header__form {
+    margin-left: 25px;
+}
+
+.main-weather {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.left__block {
+    background: #4F4F4F;
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+    border-radius: 20px;
+    position: relative;
+    width: 400px;
+    height: 300px;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+}
+
+.left__temperature {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 96px;
+    line-height: 117px;
+    /* identical to box height */
+
+
+    color: #4793FF;
+}
+
+.left__date {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 49px;
+    /* identical to box height */
+
+    margin-bottom: 31px;
+    color: #FFFFFF;
+}
+
+.left__time {
+    margin-bottom: 14px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+
+    color: #939CB0;
+}
+
+.left__city {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+
+    color: #939CB0;
+}
+
+.left__img {
+    position: absolute;
+    right: 20px;
+    top: 45px;
+    width: 120px;
+    height: 120px;
+}
+
+.right__block {
+    background: #4F4F4F;
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+    border-radius: 20px;
+
+    width: 750px;
+    height: 300px;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 40px 30px;
+
+
+}
+
+
+.right {
+    position: relative;
+}
+
+.right__background-img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+}
+
+.row__img {
+
+    background: #FFFFFF;
+    box-shadow: 1px 4px 10px -1px rgba(71, 147, 255, 0.2);
+    width: 38px;
+    height: 38px;
+    border-radius: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+
+}
+
+.row-temperature__title {
+    margin-left: 20px;
+    color: #939CB0;
+
+}
+
+.row-pressure__title {
+    margin-left: 20px;
+    color: #939CB0;
+
+}
+
+.row-precipitation__title {
+    margin-left: 20px;
+    color: #939CB0;
+
+}
+
+.row-wind__title {
+    margin-left: 20px;
+    color: #939CB0;
+
+}
+
+.row-temperature__description {
+    margin-left: 20px;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.row-pressure__description {
+    margin-left: 42px;
+    color: #FFFFFF;
+}
+
+.row-precipitation__description {
+    margin-left: 60px;
+    color: #FFFFFF;
+}
+
+.row-wind__description {
+    margin-left: 73px;
+    color: #FFFFFF;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7px;
+
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    background: #4F4F4F;
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+    border-radius: 5px;
+    padding: 7px 20px 9px;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration:none;
+    color: #FFFFFF;
+}
+
+.nav__button:hover {
+    cursor: pointer;
+}
+
+.nav__button {
+    margin-right: 15px;
+}
+
+.nav__button-active {
+    background: #4793FF;
+
+}
+
+.forecast__cards {
+    background: #4F4F4F;
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+    border-radius: 0px 0px 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.forecast__card {
+    background: #2E3035;
+    border-radius: 10px;
+    width: 149px;
+    max-width: 100%;
+}
+
+.card {
+    padding: 11px 0 13px 11px;
+    margin: 10px;
+    height: 220px;
+}
+
+.card__day {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 7px;
+    color: #FFFFFF;
+
+}
+
+.card__date {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    margin-bottom: 12px;
+    color: #939CB0
+}
+
+.card__img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 13px;
+}
+
+.card__low-temp {
+    margin-bottom: 6px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+
+
+    color: #939CB0;
+}
+
+.card__high-temp {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+
+
+    color: #FFFFFF;
+}
+
+.card__cloudly {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+
+    color: #939CB0;
+}
+
+.spinner {
+    height: 50px;
+    width: 50px;
+    border-left: 3px solid greenyellow;
+    border-bottom: 3px solid greenyellow;
+    border-right: 3px solid greenyellow;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spinner 1s linear infinite;
+    margin: 50px auto;
+}
+
+.error {
+    color: white;
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+.tw{
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.row{
+    font-family: 'Montserrat';
+    margin: 25px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color:white;
+    width:45%;
+    text-align: center;
+}
